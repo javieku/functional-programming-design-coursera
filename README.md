@@ -1,6 +1,6 @@
 # Functional Program Design in Scala
 
-Functional programming course using scala taught the creator of the language Martin Odersky. (École Polytechnique Fédérale de Lausanne)
+Functional programming course using scala taught by the creator of the language Martin Odersky. (École Polytechnique Fédérale de Lausanne)
 
 Main outcomes:
  - recognize and apply design principles of functional programs,
