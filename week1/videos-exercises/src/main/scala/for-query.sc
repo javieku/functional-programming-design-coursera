@@ -1,3 +1,5 @@
+package week1
+
 object session {
 
   /*** For-expression are useful for querying the database (Slick) ***/
