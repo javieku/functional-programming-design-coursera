@@ -127,18 +127,25 @@ trait GameDef {
                else if (b1.row == b2.row)  deltaRow(1, 1)
                else                        deltaRow(2, 1)
 
-
     /**
      * Returns the list of blocks that can be obtained by moving
      * the current block, together with the corresponding move.
      */
-    def neighbors: List[(Block, Move)] = ???
+    def neighbors: List[(Block, Move)] = List((left, Left),
+                                              (right, Right),
+                                              (up, Up),
+                                              (down, Down))
 
     /**
      * Returns the list of positions reachable from the current block
      * which are inside the terrain.
      */
-    def legalNeighbors: List[(Block, Move)] = ???
+    def legalNeighbors: List[(Block, Move)] = {
+      for {
+        (block, move) <- neighbors
+        if(block.isLegal)
+      } yield (block,move)
+    }
 
     /**
      * Returns `true` if the block is standing.
